@@ -7,4 +7,5 @@
     </p>
     <%= link_to "by プロトタイプの投稿者名", root_path, class: :card__user %>
   </div>
+  <%= image_tag prototype.image, class: 'prototype-image' if prototype.image.attached? %>
 </div>
