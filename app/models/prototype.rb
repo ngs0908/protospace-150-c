@@ -7,10 +7,10 @@ class Prototype < ApplicationRecord
   validate :validate_image_presence
 
   private
+
   def validate_image_presence
-    unless image.attached?
-      errors.add(:image, "must be attached")
-    end
+    return if image.attached?
+
+    errors.add(:image, 'must be attached')
   end
-  
 end
